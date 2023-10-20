@@ -142,7 +142,7 @@ section {
 }
 section .info {
     color: var(--pale-blue);
-    font-size: 10px;
+    font-size: 11px;
     font-size: 700;
     position: absolute;
     bottom: 10px;
