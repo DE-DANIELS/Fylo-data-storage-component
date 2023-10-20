@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --gradient-color: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --pale-blue: hsl(243, 100%, 93%);
+    --Grayish-blue: hsl(229, 7%, 55%);
+    --Dark-blue: hsl(228, 56%, 26%);
+    --Vdark-blue: hsl(229, 57%, 11%);
+    --font-size: 14px;
+    --font-family: 'Raleway', sans-serif;
+}
+body {
+    font-family: var(--font-family);
+    overflow: hidden;
+}
+section >img {
+    display: none;
+}
+section {
+    height: 100vh;
+    background-image: url(./assets/bg-mobilev1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container{
+    width: 300px;
+}
+#container .top {
+    background-color: var(--Dark-blue);
+    border-radius: 7px 90px 7px 7px;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+#container .top .logo{
+    display: flex;
+    align-items: center;
+    color: var(--pale-blue);
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+#container .top .logo .bi-stack {
+   font-size: 30px;
+   margin-bottom: -7px;
+   vertical-align: middle;
+}
+#container .top .logo h1 {
+   font-size: 32px;
+   margin-left: 10px;
+}
+.material-symbols-outlined {
+    color: var(--pale-blue);
+    background-color: var(--Vdark-blue);
+    font-size: 22px;
+    padding: 10px;
+    opacity: 70%;
+    border-radius: 7px;
+}
+.icons span:nth-child(2) {
+    margin: 0 5px;
+}
+/* BOTTOM DIV */
+.bottom {
+    position: relative;
+    background-color: var(--Dark-blue);
+    border-radius: 7px;
+    padding: 30px 25px 60px;
+}
+.bottom p {
+    color: var(--pale-blue);
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0 15px;
+}
+.bottom p:first-child span {
+    color: var(--pale-blue);
+    font-weight: 700;
+}
+.bottom .percentage {
+    width: 100%;
+    height: 16px;
+    background-color: var(--Vdark-blue);
+    border-radius: 20px;
+    padding: 2px;
+    margin: 15px 0 10px;
+}
+.bottom .value {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background-image: var(--gradient-color);
+    border-radius: 20px;
+}
+.bottom .value >div {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    background-color: var(--pale-blue);
+    border-radius: 50%;
+}
+.bottom .value2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pale-blue);
+}
+.bottom .gb-left {
+    width: 160px;
+    height: 70px;
+    color: var(--Vdark-blue);
+    background-color: var(--pale-blue);
+    position: absolute;
+    bottom: -35px;
+    left: 65px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom .gb-left h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.bottom .gb-left span {
+    font-size: 11px;
+    color: var(--Grayish-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+section .info {
+    color: var(--pale-blue);
+    font-size: var(--font-size);
+    font-size: 700;
+    position: absolute;
+    bottom: 10px;
+    z-index: 3;
+}
+section .info a {
+    color: var(--Grayish-blue);
+}
+/* RESPONSIVENESS */
+@media screen and (min-width: 1200px) { 
+    section {
+        background-image: none;
+        background-color: var(--Vdark-blue);
+    }
+    section img {
+        display: block;
+        width: 100%;
+        height: 52%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+    #container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        z-index: 2;
+    }
+    #container .top {
+        width: 23%;
+        margin: 0 20px 0 0;
+    }
+    #container .bottom {
+        width: 40%;
+        margin-bottom: -35px;
+        padding: 30px;
+    }
+    .bottom .gb-left {
+        width: 140px;
+        height: 55px;
+        top: -37px;
+        left: 340px;
+        border-bottom-right-radius: 0;
+    }
+    .bottom .gb-left::after{
+        background-color: var(--pale-blue);
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        bottom: -14.5px;
+        border-bottom: 15px solid var(--Dark-blue);
+        border-right: 15px solid transparent;
+    }
+    .bottom .gb-left h1 {
+        font-size: 30px;
+    }
+    .bottom .gb-left span {
+        font-size: 10px;
+    }
+}
