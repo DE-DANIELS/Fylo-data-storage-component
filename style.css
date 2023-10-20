@@ -206,4 +206,7 @@ section .info a {
     .bottom .gb-left span {
         font-size: 10px;
     }
+    section .info {
+        font-size: var(--font-size);
+    }
 }
